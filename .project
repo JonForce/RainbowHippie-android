@@ -3,6 +3,7 @@
 	<name>RainbowHippie-android</name>
 	<comment></comment>
 	<projects>
+		<project>RainbowHippie</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

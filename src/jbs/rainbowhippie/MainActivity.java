@@ -19,14 +19,10 @@ public class MainActivity extends AndroidApplication {
         AndroidApplicationConfiguration cfg = new AndroidApplicationConfiguration();
         cfg.useGL20 = false;
         
-        Game game = new Game() {
-        	@Override public void create() {
-        		shouldPlayIntro = false;
-        		super.create();
-        		Game.activeGame.resize(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
-                RainbowHippie.usesTouchControls = true;
-        	}
-        };
+        Game game = new Game();
+        game.shouldPlayIntro = false;
+        game.shouldLoadDuringIntro = false;
+		RainbowHippie.usesTouchControls = true;
         
         initialize(game, cfg);
     }
